@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(255,0,0,.4);
+}
+
+/* 导航栏 header */
+nav {
+    padding: 9px 0;
+    background-color: rgba(0,0,0,0.08);
+}
+
+.navbar-container {
+    position: relative;
+    margin: 0 auto;
+    width: 800px;
+    height: 52px;
+}
+
+.navbar-header {
+    align-self: center;
+}
+
+.navbar-header-icon {
+    float: left;
+}
+
+.navbar-header-icon img {
+    align-self: center;
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-header span {
+    align-self: center;
+    margin-left: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-nav {
+    position: absolute;
+    right: 0;
+}
+
+.navbar-nav-ul {
+
+}
+
+.navbar-nav li {
+    display: block;
+    float: left;
+}
+
+.navbar-nav li a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 17px;
+    /* font-weight: bold; */
+    color: white;
+
+}
+
+.navbar-nav li.active a {
+    color: red;
+}
+
+.navbar-nav .navbar-nav-ul li a::after {
+    background-color: red;
+    content: "";
+    display: inline-block;
+    height:2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    z-index: 1;
+    transition:all 0.3s ease 0s;
+}
+
+.navbar-nav li.active a::after,
+ .navbar-nav li a:hover::after {
+    width: 100%;
+}
+
+.search {
+    padding: 100px 0;
+}
+
+.search-content {
+    width: 800px;
+}
+
+.search-icon {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.search-icon img {
+    width: 100px;
+}
+
+.search-title {
+    text-align: center;
+    color: white;
+}
+
+.search-title h1 {
+    margin: 0;
+    margin-bottom:20px;
+    font-size: 70px;
+    line-height: 100px;
+}
+
+.searchBar {
+    padding: 50px 20px;
+    background-color: rgba(255, 0, 0,.3);
+    border-radius: 15px;
+}
+
+.searchBar {
+    display: flex;
+    padding: 50px 20px;
+}
+
+.searchBar input, button {
+    padding: 10px;
+    line-height: 30px;
+    border: 0;
+    border-radius: 7px;
+}
+
+.searchBar input {
+    margin-right: 5px;
+    flex: 80;
+    font-size: 20px;
+    color: rgba(255,0,0,.8)
+}
+
+.searchBar button {
+    flex: 20;
+    background-color: rgba(255, 255, 255, .5);
+    font-size: 23px;
+    color: rgba(255,0,0,1);
+}
