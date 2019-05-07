@@ -7,7 +7,7 @@ body {
 /* 导航栏 header */
 nav {
     padding: 9px 0;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 0, 0, 0.4);
 }
 
 .navbar-container {
@@ -218,7 +218,7 @@ nav {
     }
 }
 
-@media screen and (min-width:700px) and (max-width: 800px) {
+@media screen and (min-width: 640px) and (max-width: 800px) {
     .navbar-container,
     .search-content {
         width: 600px;
@@ -243,60 +243,10 @@ nav {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 700px) {
+@media screen and (max-width: 640px) {
     .navbar-container,
     .search-content {
-        width: 550px;
-    }
-
-    .navbar-nav li a {
-        margin: 0 5px;
-    }
-
-    .searchBar {
-        flex-wrap: wrap;
-        padding: 50px 50px;
-    }
-
-    .searchBar input {
-        margin-bottom: 10px;
-        width: 100%;
-    }
-
-    .searchBar button {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 600px) {
-    .navbar-container,
-    .search-content {
-        width: 480px;
-    }
-
-    .navbar-nav li a {
-        margin: 0 3px;
-    }
-
-    .searchBar {
-        flex-wrap: wrap;
-        padding: 50px 15px;
-    }
-
-    .searchBar input {
-        margin-bottom: 10px;
-        width: 100%;
-    }
-
-    .searchBar button {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .navbar-container,
-    .search-content {
-        width: 96%;
+        width: 93.75%;
     }
 
     nav {
@@ -312,12 +262,18 @@ nav {
     }
 
     .navbar-nav {
-        background-color: rgba(234, 140, 141, 1);
+        background-color: rgba(254, 100, 104, 1);
         width: 100%;
         max-height: 0;
-        top: 60px;
+        top: 50px;
+        border-radius: 10px;
         overflow-y: hidden;
         transition: max-height .8s ease;
+    }
+
+    .navbar-nav::after {
+        height: 10px;
+        width: 100%;
     }
 
     .navbar-nav.open {
@@ -325,7 +281,7 @@ nav {
     }
 
     .navbar-nav ul {
-        padding-left: 0;
+        padding-left: 40px;
     }
 
     .navbar-nav li {
@@ -339,7 +295,7 @@ nav {
 
     .searchBar {
         flex-wrap: wrap;
-        padding: 50px 15px;
+        padding: 50px 20px;
     }
 
     .searchBar input {
