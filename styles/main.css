@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
 body {
-    background-color: rgba(255,0,0,.4);
+    background-color: rgba(255, 0, 0, .4);
 }
 
 /* 导航栏 header */
 nav {
     padding: 9px 0;
-    background-color: rgba(0,0,0,0.08);
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
 .navbar-container {
     position: relative;
     margin: 0 auto;
-    width: 800px;
+    padding: 0;
     height: 52px;
 }
 
@@ -36,6 +36,31 @@ nav {
     margin-left: 5px;
     color: white;
     font-size: 20px;
+}
+
+
+.navbar-button {
+    display: none;
+    float: right;
+    height: 40px;
+    width: 40px;
+    padding: 7px;
+    background-color: transparent;
+    border: 3px solid rgba(255,0,0,.3);
+    border-radius: 6px;
+}
+
+.navbar-button span {
+    display: block;
+    margin: 0;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: rgba(255, 0, 0, .3);
+}
+
+.navbar-button .span-middle {
+    margin: 4px 0;
 }
 
 .navbar-nav {
@@ -61,7 +86,6 @@ nav {
     font-size: 17px;
     /* font-weight: bold; */
     color: white;
-
 }
 
 .navbar-nav li.active a {
@@ -72,17 +96,17 @@ nav {
     background-color: red;
     content: "";
     display: inline-block;
-    height:2px;
+    height: 2px;
     position: absolute;
     left: 0;
     bottom: -10px;
     width: 0;
     z-index: 1;
-    transition:all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 .navbar-nav li.active a::after,
- .navbar-nav li a:hover::after {
+.navbar-nav li a:hover::after {
     width: 100%;
 }
 
@@ -91,7 +115,7 @@ nav {
 }
 
 .search-content {
-    width: 800px;
+    width: 1000px;
 }
 
 .search-icon {
@@ -110,23 +134,24 @@ nav {
 
 .search-title h1 {
     margin: 0;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     font-size: 70px;
     line-height: 100px;
 }
 
 .searchBar {
     padding: 50px 20px;
-    background-color: rgba(255, 0, 0,.3);
+    background-color: rgba(255, 0, 0, .3);
     border-radius: 15px;
 }
 
 .searchBar {
     display: flex;
-    padding: 50px 20px;
+    padding: 50px 120px;
 }
 
 .searchBar input, button {
+    margin: 2px;
     padding: 10px;
     line-height: 30px;
     border: 0;
@@ -134,15 +159,195 @@ nav {
 }
 
 .searchBar input {
-    margin-right: 5px;
-    flex: 80;
+    width: 75%;
     font-size: 20px;
-    color: rgba(255,0,0,.8)
+    color: rgba(255, 0, 0, .8)
 }
 
 .searchBar button {
-    flex: 20;
+    width: 25%;
     background-color: rgba(255, 255, 255, .5);
     font-size: 23px;
-    color: rgba(255,0,0,1);
+    color: rgba(255, 0, 0, 1);
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-container,
+    .search-content {
+        width: 1000px;
+    }
+
+    .searchBar {
+        padding: 50px 120px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .navbar-container,
+    .search-content {
+        width: 800px;
+    }
+
+    .searchBar {
+        padding: 50px 20px;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width: 1000px) {
+    .navbar-container,
+    .search-content {
+        width: 700px;
+    }
+
+    .navbar-nav li a {
+        margin: 0 7px;
+    }
+
+    .searchBar {
+        flex-wrap: wrap;
+        padding: 50px 70px;
+    }
+
+    .searchBar input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .searchBar button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width: 800px) {
+    .navbar-container,
+    .search-content {
+        width: 600px;
+    }
+
+    .navbar-nav li a {
+        margin: 0 5px;
+    }
+
+    .searchBar {
+        flex-wrap: wrap;
+        padding: 50px 20px;
+    }
+
+    .searchBar input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .searchBar button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    .navbar-container,
+    .search-content {
+        width: 550px;
+    }
+
+    .navbar-nav li a {
+        margin: 0 5px;
+    }
+
+    .searchBar {
+        flex-wrap: wrap;
+        padding: 50px 50px;
+    }
+
+    .searchBar input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .searchBar button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+    .navbar-container,
+    .search-content {
+        width: 480px;
+    }
+
+    .navbar-nav li a {
+        margin: 0 3px;
+    }
+
+    .searchBar {
+        flex-wrap: wrap;
+        padding: 50px 15px;
+    }
+
+    .searchBar input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .searchBar button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-container,
+    .search-content {
+        width: 96%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .navbar-header {
+        width: 100%;
+    }
+
+    .navbar-button {
+        display: block;
+    }
+
+    .navbar-nav {
+        background-color: rgba(234, 140, 141, 1);
+        width: 100%;
+        max-height: 0;
+        top: 60px;
+        overflow-y: hidden;
+        transition: max-height .8s ease;
+    }
+
+    .navbar-nav.open {
+        max-height: 260px;
+    }
+
+    .navbar-nav ul {
+        padding-left: 0;
+    }
+
+    .navbar-nav li {
+        float: none;
+        padding: 8px 0;
+    }
+
+    .navbar-nav li a {
+        margin: 0 3px;
+    }
+
+    .searchBar {
+        flex-wrap: wrap;
+        padding: 50px 15px;
+    }
+
+    .searchBar input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .searchBar button {
+        width: 100%;
+    }
 }
