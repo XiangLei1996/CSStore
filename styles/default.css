@@ -128,9 +128,8 @@ h5 {
 
 /* center-content */
 .vertical-center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
     /*-ms-flex-align: center;*/
 }
 
