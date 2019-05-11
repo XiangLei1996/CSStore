@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.Dao.UserDao">
-    <select id="selUser" parameterType="User" resultType="User">
+    <select id="selectUser" parameterType="User" resultType="User">
         select * from user_info where userName = #{userName} and passwod = #{password}
     </select>
 </mapper>

@@ -12,5 +12,5 @@ public interface UserDao {
     /**
      * 查询用户
      */
-    public User selUser(User user);
+    public User selectUser(User user);
 }
