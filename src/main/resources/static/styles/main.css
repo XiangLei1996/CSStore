@@ -21,6 +21,31 @@ nav {
     align-self: center;
 }
 
+.navbar_header_button {
+    display: none;
+    float: right;
+    height: 40px;
+    width: 40px;
+    padding: 7px;
+    background-color: transparent;
+    border: 3px solid rgba(255,0,0,.3);
+    border-radius: 6px;
+}
+
+.navbar_header_button span {
+    display: block;
+    margin: 0;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: rgba(255, 0, 0, .3);
+}
+
+.navbar_header_button .span-middle {
+    margin: 4px 0;
+}
+
+
 .navbar_header_icon {
     float: left;
 }
@@ -37,31 +62,6 @@ nav {
     margin-left: 5px;
     color: white;
     font-size: 20px;
-}
-
-
-.navbar_button {
-    display: none;
-    float: right;
-    height: 40px;
-    width: 40px;
-    padding: 7px;
-    background-color: transparent;
-    border: 3px solid rgba(255,0,0,.3);
-    border-radius: 6px;
-}
-
-.navbar_button span {
-    display: block;
-    margin: 0;
-    content: "";
-    width: 20px;
-    height: 3px;
-    background-color: rgba(255, 0, 0, .3);
-}
-
-.navbar_button .span-middle {
-    margin: 4px 0;
 }
 
 .navbar_nav {
@@ -151,7 +151,8 @@ nav {
     padding: 50px 120px;
 }
 
-.search_bar input, button {
+.search_bar input,
+.search_bar button {
     margin: 2px;
     padding: 10px;
     line-height: 30px;
@@ -357,17 +358,17 @@ nav {
 
 .logreg_text,
 .logreg_button {
-    margin: 5px;
+    margin: 5px 0;
     line-height: 45px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 0, 0, .5);
 }
 
 .logreg_text {
-    margin: 5px 0;
     padding: 0 0 0 20px;
     width: 100%;
     border-radius: 10px;
-    border: 3px solid rgba(255, 0, 0, .3);
-    font-size: 18px;
 }
 
 #logreg_checkbox {
@@ -449,10 +450,22 @@ nav {
 
 /* 注册 register */
 
+.register_container {
+    position: relative;
+    width: 100%;
+}
+
+.register_sms,
+.register_sms_button {
+}
+
 .register_sms {
-    width: 75%;
+    width: 55%;
 }
 
 .register_sms_button {
-    width: 20%;
+    float: right;
+    width: 35%;
+    color: rgba(255, 0, 0, 1);
+    background-color:rgba(255, 255, 255, .5);
 }
