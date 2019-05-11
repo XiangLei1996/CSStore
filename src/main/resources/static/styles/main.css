@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-color: rgba(255, 0, 0, .4);
+    background-color: rgba(255, 0, 0, .3);
 }
 
 /* 导航栏 header */
@@ -10,28 +10,29 @@ nav {
     background-color: rgba(255, 0, 0, 0.4);
 }
 
-.navbar-container {
+.navbar_container {
     position: relative;
     margin: 0 auto;
     padding: 0;
     height: 52px;
 }
 
-.navbar-header {
+.navbar_header {
     align-self: center;
 }
 
-.navbar-header-icon {
+.navbar_header_icon {
     float: left;
 }
 
-.navbar-header-icon img {
+.navbar_header_icon img {
     align-self: center;
     height: 40px;
     width: 40px;
 }
 
-.navbar-header span {
+.navbar_header span {
+    margin: auto 0;
     align-self: center;
     margin-left: 5px;
     color: white;
@@ -39,7 +40,7 @@ nav {
 }
 
 
-.navbar-button {
+.navbar_button {
     display: none;
     float: right;
     height: 40px;
@@ -50,7 +51,7 @@ nav {
     border-radius: 6px;
 }
 
-.navbar-button span {
+.navbar_button span {
     display: block;
     margin: 0;
     content: "";
@@ -59,25 +60,25 @@ nav {
     background-color: rgba(255, 0, 0, .3);
 }
 
-.navbar-button .span-middle {
+.navbar_button .span-middle {
     margin: 4px 0;
 }
 
-.navbar-nav {
+.navbar_nav {
     position: absolute;
     right: 0;
 }
 
-.navbar-nav-ul {
+.navbar_nav_ul {
 
 }
 
-.navbar-nav li {
+.navbar_nav_ul li {
     display: block;
     float: left;
 }
 
-.navbar-nav li a {
+.navbar_nav_ul li a {
     display: inline-block;
     position: relative;
     padding: 0;
@@ -88,11 +89,7 @@ nav {
     color: white;
 }
 
-.navbar-nav li.active a {
-    color: red;
-}
-
-.navbar-nav .navbar-nav-ul li a::after {
+.navbar_nav_ul li a::after {
     background-color: red;
     content: "";
     display: inline-block;
@@ -105,8 +102,12 @@ nav {
     transition: all 0.3s ease 0s;
 }
 
-.navbar-nav li.active a::after,
-.navbar-nav li a:hover::after {
+.navbar_nav li.active a {
+    color: red;
+}
+
+.navbar_nav li.active a::after,
+.navbar_nav li a:hover::after {
     width: 100%;
 }
 /*******************/
@@ -117,43 +118,40 @@ nav {
     padding: 100px 0;
 }
 
-.search-content {
+.search_container {
     width: 1000px;
 }
 
-.search-icon {
+.search_icon {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.search-icon img {
+.search_icon img {
     width: 100px;
 }
 
-.search-title {
+.search_title {
     text-align: center;
     color: white;
 }
 
-.search-title h1 {
+.search_title h1 {
     margin: 0;
     margin-bottom: 20px;
     font-size: 70px;
     line-height: 100px;
 }
 
-.searchBar {
+.search_bar {
     padding: 50px 20px;
     background-color: rgba(255, 0, 0, .3);
     border-radius: 15px;
-}
-
-.searchBar {
     display: flex;
     padding: 50px 120px;
 }
 
-.searchBar input, button {
+.search_bar input, button {
     margin: 2px;
     padding: 10px;
     line-height: 30px;
@@ -161,13 +159,13 @@ nav {
     border-radius: 7px;
 }
 
-.searchBar input {
+.search_bar input {
     width: 75%;
     font-size: 20px;
     color: rgba(255, 0, 0, .8)
 }
 
-.searchBar button {
+.search_bar button {
     width: 25%;
     background-color: rgba(255, 255, 255, .5);
     font-size: 23px;
@@ -178,80 +176,80 @@ nav {
 
 /* 响应式 responsive */
 @media screen and (min-width: 1200px) {
-    .navbar-container,
-    .search-content {
+    .navbar_container,
+    .search_container {
         width: 1000px;
     }
 
-    .searchBar {
+    .search_bar {
         padding: 50px 120px;
     }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
-    .navbar-container,
-    .search-content {
+    .navbar_container,
+    .search_container {
         width: 800px;
     }
 
-    .searchBar {
+    .search_bar {
         padding: 50px 20px;
     }
 }
 
 @media screen and (min-width:800px) and (max-width: 1000px) {
-    .navbar-container,
-    .search-content {
+    .navbar_container,
+    .search_container {
         width: 700px;
     }
 
-    .navbar-nav li a {
+    .navbar_nav li a {
         margin: 0 7px;
     }
 
-    .searchBar {
+    .search_bar {
         flex-wrap: wrap;
         padding: 50px 70px;
     }
 
-    .searchBar input {
+    .search_bar input {
         margin-bottom: 10px;
         width: 100%;
     }
 
-    .searchBar button {
+    .search_bar button {
         width: 100%;
     }
 }
 
 @media screen and (min-width: 640px) and (max-width: 800px) {
-    .navbar-container,
-    .search-content {
+    .navbar_container,
+    .search_container {
         width: 600px;
     }
 
-    .navbar-nav li a {
+    .navbar_nav li a {
         margin: 0 5px;
     }
 
-    .searchBar {
+    .search_bar {
         flex-wrap: wrap;
         padding: 50px 20px;
     }
 
-    .searchBar input {
+    .search_bar input {
         margin-bottom: 10px;
         width: 100%;
     }
 
-    .searchBar button {
+    .search_bar button {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .navbar-container,
-    .search-content {
+    .navbar_container,
+    .search_container {
         width: 93.75%;
     }
 
@@ -259,15 +257,15 @@ nav {
         width: 100%;
     }
 
-    .navbar-header {
+    .navbar_header {
         width: 100%;
     }
 
-    .navbar-button {
+    .navbar_button {
         display: block;
     }
 
-    .navbar-nav {
+    .navbar_nav {
         background-color: rgba(254, 100, 104, 1);
         width: 100%;
         max-height: 0;
@@ -277,63 +275,66 @@ nav {
         transition: max-height .8s ease;
     }
 
-    .navbar-nav::after {
+    .navbar_nav::after {
         height: 10px;
         width: 100%;
     }
 
-    .navbar-nav.open {
+    .navbar_nav.open {
         max-height: 260px;
     }
 
-    .navbar-nav ul {
+    .navbar_nav ul {
         padding-left: 40px;
     }
 
-    .navbar-nav li {
+    .navbar_nav li {
         float: none;
         padding: 8px 0;
     }
 
-    .navbar-nav li a {
+    .navbar_nav li a {
         margin: 0 3px;
     }
 
-    .searchBar {
+    .search_bar {
         flex-wrap: wrap;
         padding: 50px 20px;
     }
 
-    .searchBar input {
+    .search_bar input {
         margin-bottom: 10px;
         width: 100%;
     }
 
-    .searchBar button {
+    .search_bar button {
         width: 100%;
     }
 }
 /*******************/
 
-/******************************************/
+/*******************/
 
-/* 登录 login */
-.login-container {
-    padding-top: 200px;
+/* 登录和注册 logreg */
+
+.logreg_container {
+    padding-top: 150px;
     width: 400px;
     color:rgba(255, 0, 0, 0.8);
 }
 
-.login-reminder {
+.logreg_reminder {
+
 }
 
-.login-reminder p {
+.logreg_reminder p {
     margin: 20px 0;
     font-size: 30px;
     text-align: center;
 }
 
-.login-form {
+/* form */
+.logreg_form {
     display: flex;
     position: relative;
     margin-bottom: 10px;
@@ -342,13 +343,25 @@ nav {
     vertical-align: middle;
 }
 
-.login-textform,
-.login-button {
+.logreg_form label {
+    user-select: none;
+    font-size: 20px;
+}
+
+.logreg_form label i {
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+/*******************/
+
+.logreg_text,
+.logreg_button {
     margin: 5px;
     line-height: 45px;
 }
 
-.login-textform {
+.logreg_text {
     margin: 5px 0;
     padding: 0 0 0 20px;
     width: 100%;
@@ -357,7 +370,18 @@ nav {
     font-size: 18px;
 }
 
-.login-button {
+#logreg_checkbox {
+    visibility: hidden;
+    text-align: right;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+/*******************/
+
+/* login 登录 */
+
+.login_button {
     display: inline-flex;
     position: absolute;
     padding:0;
@@ -374,38 +398,17 @@ nav {
     border-radius: 8px;
 }
 
-.login-button i {
+.login_button i {
     margin:auto;
     font-size: 20px;
 }
 
-#login-checkbox {
-    visibility: hidden;
-    text-align: right;
-    line-height: 20px;
-    font-size: 20px;
-}
-
-.login-form label {
-    user-select: none;
-    font-size: 20px;
-}
-
-.login-form label i {
-    margin-right: 5px;
-    font-weight: 400;
-}
-
-/* .login-checkbox input {
-    visibility: hidden;
-} */
-
-.login-options {
+.login_options {
     text-align: right;
 }
 
 
-.login-options > div {
+.login_options > div {
     display: flex;
     vertical-align: middle;
     flex-direction: column-reverse;
@@ -414,40 +417,42 @@ nav {
     /* transition: all 0.3s; */
 }
 
-.login-options p,
-.login-options a {
+.login_options p,
+.login_options a {
     margin: 0;
     line-height: 20px;
     color: rgba(255, 0, 0, 0.5);
     text-decoration: none;
 }
 
-.login-rememberme > div {
+/* .login_rememberme > div {
     display:inline-flex;
     vertical-align: middle;
-}
+} */
 
-.rememberme-checkbox {
-    width: 18px;
-    height: 18px;
-}
-
-.login-rememberme p {
-    padding-left: 7px;
-    font-size: 20px;
-}
-
-.login-forgotIDPWD div {
+.login_forgotIDPWD div {
     font-size: 10px;
 }
 
-.login-register > div {
+.login_register > div {
     display: inline-flex;
     vertical-align: middle;
     text-align: right;
 }
 
-.login-register > div a,
-.login-register > div p {
+.login_register > div a,
+.login_register > div p {
     flex:1;
+}
+
+/*******************/
+
+/* 注册 register */
+
+.register_sms {
+    width: 75%;
+}
+
+.register_sms_button {
+    width: 20%;
 }
