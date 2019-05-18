@@ -22,4 +22,14 @@ public class UserServiceImpl implements UserService {
     public User userLogin(User user) {
         return userDao.selectUser(user);
     }
+
+    @Override
+    public Integer userRegister(User user){
+        return userDao.insertUser(user);
+    }
+
+    @Override
+    public User userInfo(User user) {
+        return userDao.selectUserInfo(user);
+    }
 }

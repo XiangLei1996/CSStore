@@ -5,11 +5,6 @@
          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
-    <!--&lt;!&ndash; 欢迎主页 &ndash;&gt;-->
-    <!--<welcome-file-list>-->
-        <!--<welcome-file>/WEB-INF/views/index.jsp</welcome-file>-->
-    <!--</welcome-file-list>-->
-
     <!-- 加载spring容器 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>

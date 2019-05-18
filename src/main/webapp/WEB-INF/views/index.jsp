@@ -1,12 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: hasee
-  Date: 2019/5/11
-  Time: 23:23
+  Date: 2019/5/12
+  Time: 8:49
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -17,6 +18,16 @@
 </head>
 
 <body>
+    <c:if test="${user == null}">
+        <p>登录失败</p>
+    </c:if>
+    <c:if test="${user != null}">
+        <table>
+            <td>${user.id}</td>
+            <td>${user.username}</td>
+            <td>${user.password}</td>
+        </table>
+    </c:if>
 <div class="mainPage">
     <nav>
         <div class="navbar_container vertical-center">
@@ -27,7 +38,7 @@
                     <span></span>
                 </button>
                 <div class="navbar_header_icon vertical-center">
-                    <img src="./images/underconstruction.png" alt="Web icon">
+                    <img src="images/underconstruction.png" alt="Web icon">
                     <span>图标位置</span>
                 </div>
             </div>
@@ -58,7 +69,7 @@
     <div class="search">
         <div class="search_container horizontal-center">
             <div class="search_icon">
-                <img class="" src="./images/underconstruction.png" alt="search icon" />
+                <img class="" src="images/underconstruction.png" alt="search icon" />
             </div>
             <div class="search_title">
                 <h1>Loading...</h1>
@@ -71,9 +82,10 @@
     </div>
 </div>
 
-<script type="text/javascript" src="./scripts/index.js">
+<script type="text/javascript" src="scripts/index.js">
 
 </script>
 </body>
 
 </html>
+
