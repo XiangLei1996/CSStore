@@ -10,9 +10,10 @@ gulp.task('serve', function () {
     // Serve files from the root of this project
     browserSync.init({
         server: {
-            baseDir: "./"
+            // baseDir: ['template','static']
+            baseDir: ['./template','./']
         }
     });
 
-    gulp.watch(["*.html","styles/**/*.css","scripts/**/*.js"]).on("change", reload);
+    gulp.watch(['./template/*.*','./static/styles/*.css','./static/scripts/*.js']).on("change", reload);
 });
