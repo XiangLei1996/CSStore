@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSSWarehouse</title>
+    <link rel="stylesheet" href="/static/styles/default.css">
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body>
+    <div class="mainPage">
+        <nav>
+            <div class="navbar_container vertical-center">
+                <div class="navbar_header">
+                    <button class="navbar_header_button" type="button" onclick="toggleNavgation()" onblur="closeNavgation()">
+                        <span></span>
+                        <span class="span-middle"></span>
+                        <span></span>
+                    </button>
+                    <div class="navbar_header_icon vertical-center">
+                        <img src="/static/images/underconstruction.png" alt="Web icon">
+                        <span>图标位置</span>
+                    </div>
+                </div>
+                <div id="navbar_div" class="navbar_nav">
+                    <ul class="navbar_nav_ul">
+                        <li class="active">
+                            <a class="" href="#home">首页</a>
+                        </li>
+                        <li>
+                            <a class="" href="#tentative">暂定</a>
+                        </li>
+                        <li>
+                            <a class="" href="#tentative">暂定</a>
+                        </li>
+                        <li>
+                            <a class="" href="#team">团队</a>
+                        </li>
+                        <li>
+                            <a class="" href="#contact">联系我们</a>
+                        </li>
+                        <li>
+                            <a class="" href="login.html" target="_blank">注册/登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="search">
+            <div class="search_container horizontal-center">
+                <div class="search_icon">
+                    <img class="" src="images/underconstruction.png" alt="search icon" />
+                </div>
+                <div class="search_title">
+                    <h1>Loading...</h1>
+                </div>
+                <form class="search_bar">
+                    <input type="text" placeholder="Search something">
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/scripts/index.js">
+
+    </script>
+</body>
+
+</html>
