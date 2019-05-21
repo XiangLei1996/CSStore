@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/styles/default.css">
-        <link rel="stylesheet" href="/styles/main.css">
-        <title>Register</title>
-    </head>
-    <body>
-        <div class="logreg_container horizontal-center">
-            <div class="logreg_reminder">
-                <p>注册您的账户</p>
-            </div>
-            <form class="logreg_form" action="" method="post">
-                <input type="text" class="logreg_text" name="username" placeholder="用户名" />
-                <input type="password" class="logreg_text" name="password" placeholder="密码" />
-                <input type="password" class="logreg_text" name="" value="" placeholder="name@example.com">
-                <input type="password" class="logreg_text" name="" value="" placeholder="电话号码">
-                <div class="register_container">
-                    <input type="password" class="logreg_text register_sms" name="" value="" placeholder="短信验证码">
-                    <button type="submit" class="logreg_button register_sms_button">获取短信验证码</button>
-                </div>
-            </form>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="logreg_container horizontal-center">
+        <div class="logreg_reminder">
+            <p>注册您的账户</p>
         </div>
-    </body>
+        <form id="register_form" class="logreg_form" action="registerOk.html" method="post" onsubmit="return checkSubmit()">
+            <input id="username" type="text" class="logreg_text" name="username" autocomplete="off" placeholder="用户名" onkeyup="checkinput(this)"/>
+            <input id="password" type="password" class="logreg_text" name="password" placeholder="密码" onkeyup="checkinput(this)" />
+            <input id="confirmpassword" type="password" class="logreg_text" name="comfirm_password" placeholder="确认密码" onkeyup="confirmPassword(this)"/>
+            <input id="emailaddress" type="text" class="logreg_text" name="" value="" placeholder="name@example.com" onkeyup="checkinput(this)">
+            <input id="phonenumber" type="text" class="logreg_text" name="" value="" placeholder="电话号码" onkeyup="checkinput(this)">
+            <!-- <div class="register_container">
+                <input id="verificationcode" type="password" class="logreg_text register_sms" name="" value="" placeholder="短信验证码">
+                <button type="submit" class="logreg_button register_sms_button">获取短信验证码</button>
+            </div> -->
+            <div class="register_submit_div">
+                <input id="submitButton" type="submit" class="logreg_button register_submit" name="submit_button" value="注册"/>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="./scripts/checkInput.js">
+
+</script>
+
 </html>
