@@ -464,8 +464,45 @@ nav {
 }
 
 .register_sms_button {
+    margin-right: 20%;
     float: right;
     width: 35%;
     color: rgba(255, 0, 0, 1);
     background-color:rgba(255, 255, 255, .5);
 }
+
+.register_submit_div {
+    width: 100%;
+}
+
+.register_submit {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40%;
+    padding:0;
+    background-color: rgba(255, 0, 0, 0);
+    color: rgba(255, 0, 0, 1);
+}
+
+/*******************/
+
+/* 警告 warning */
+
+.warning {
+    margin:0;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.warning::before {
+    content: "";
+    display: inline-flex;
+    height: 20px;
+    width: 20px;
+    background-image: url(./static/images/warning.png);
+
+}
+
+/*******************/
